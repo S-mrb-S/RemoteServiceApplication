@@ -1,4 +1,4 @@
-package sp.remoteapplication;
+package sp.remoteapplication.test;
 
 import android.accessibilityservice.AccessibilityService;
 import android.util.Log;

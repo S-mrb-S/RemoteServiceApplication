@@ -13,6 +13,7 @@ class ScrollingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.decorView.setBackgroundResource(android.R.color.transparent)
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
