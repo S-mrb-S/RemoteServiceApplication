@@ -57,8 +57,6 @@
                 android:resource="@xml/accessibility_service_config" />
         </service>
 
-        <service android:name=".test.MyService" />
-
     </application>
 
 </manifest>
