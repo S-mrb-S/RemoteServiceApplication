@@ -1,14 +1,9 @@
 package sp.remoteapplication
 
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
-import android.graphics.PixelFormat
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -31,9 +26,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import sp.remoteapplication.ui.theme.RemoteApplicationTheme
 
-
+/**
+ * by Mehrab
+ */
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -88,10 +84,14 @@ fun ActionButton(text: String) {
                 if (isInstalled) {
                     // برنامه وجود دارد
                     Toast.makeText(context, "yes", Toast.LENGTH_SHORT).show()
-                    
+
+//                    Toast.makeText(context, "Service started!", Toast.LENGTH_SHORT).show()
+//                    val serviceIntent = Intent(context, RemoteAccessibilityService::class.java)
+//                    context.startService(serviceIntent)
+
                 } else {
                     // برنامه وجود ندارد
-                    Toast.makeText(context, "noop", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "not installed", Toast.LENGTH_SHORT).show()
                 }
             } catch (e: Exception) {
                 Toast.makeText(context, "Ex", Toast.LENGTH_SHORT).show()
